@@ -1,0 +1,54 @@
+{
+    "name": "thinklifepot/mvc",
+    "description": "MVC framework",
+    "keywords": [
+        "thinklifepot",
+        "mvc"
+    ],
+    "homepage": "https://github.com/thinklifepot/mvc",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Thinklife",
+            "email": "thinklifepot20@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thinklifepot\\MVC\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Thinklifepot\\MVC\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Thinklifepot\\MVC\\MVCServiceProvider"
+            ],
+            "aliases": {
+                "MVC": "Thinklifepot\\MVC\\MVCFacade"
+            }
+        }
+    }
+}
